@@ -1,9 +1,263 @@
+:root{
+    --progress: 0;
+}
+
+.content {
+    padding: 0 !important;
+    
+
+}
+
 .back-button {
     width: 50px;
     margin: 0 15px;
+    z-index: 25;
+    filter: brightness(100);
+    
 }
 
 .back-button:hover {
-    opacity: 0.7;
+    opacity: 0.8;
     cursor: pointer;
+}
+
+#pokebola {
+    width: 400px;
+    position: absolute;
+    top: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: .3;
+    z-index: -5;
+
+}
+
+.t1 {
+    font-size: 40px;
+}
+
+.t2 {
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+#poke-name {
+        text-transform: capitalize;
+}
+
+#type-box {
+    position: relative;
+    z-index: 15;
+}
+
+#poke-card {
+    width: 100%;
+    margin: 0;
+}
+
+#images-box {
+    position: relative;
+    z-index: 10;
+}
+
+#poke-info {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: fit-content;
+    border-radius: 30px 30px 0 0;
+    margin-top: -50px;
+    padding: 70px 30px 50px;
+    box-shadow: 3px 5px 25px rgba(0, 0, 0, 0.322);
+}
+
+#text-box {
+    padding: 0 80px;
+}
+
+#text-box > p {
+    font-size: 20px;
+}
+
+.titulo {
+    text-align: center;
+    margin: 30px;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 50px;
+    color: white;
+}
+
+.types {
+    display: flex;
+    padding: 0 40px;
+    margin: 0;
+    list-style: none;
+
+}
+
+.types .type {
+    color: #fff;
+    padding: .55rem .8rem;
+    margin: .2rem .5em .2rem .2rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.24);
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+#poke-img {
+    display: block;
+    margin: auto;
+    width: 250px;
+    z-index: 5;
+
+}
+
+.progress-bar {
+    font-size: 20px;
+    text-align: center;
+    width: 35vw;
+    margin: auto;
+    
+}
+
+.hp-bar{
+    --progress: ;
+    height: 10px;
+    padding: 0px;
+    background-color: #cccccc42;
+    display: flex;
+}
+  
+.hp-bar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+}
+
+.atk-bar{
+    --progress: ;
+    height: 10px;
+    padding: 0px;
+    background-color: #cccccc42;
+    display: flex;
+}
+  
+.atk-bar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+}
+
+.def-bar{
+    --progress: ;
+    height: 10px;
+    padding: 0px;
+    background-color: #cccccc42;
+    display: flex;
+}
+  
+.def-bar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+}
+
+.atk-sp-bar{
+    --progress: ;
+    height: 10px;
+    padding: 0px;
+    background-color: #cccccc42;
+    display: flex;
+}
+  
+.atk-sp-bar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+}
+
+.def-sp-bar{
+    --progress: ;
+    height: 10px;
+    padding: 0px;
+    background-color: #cccccc42;
+    display: flex;
+}
+  
+.def-sp-bar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+}
+
+.total-bar{
+    --progress: ;
+    height: 10px;
+    padding: 0px;
+    background-color: #cccccc42;
+    display: flex;
+}
+  
+.total-bar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+}
+
+
+
+@media screen and (max-width: 992px) {
+    #poke-info {
+        height: 90vh;
+        padding: 70px 0px;
+    }
+
+    .t1 {
+        font-size: 35px;
+    }
+
+    .t2 {
+        padding: 20px 0;
+        font-size: 28px;
+    }
+
+    #text-box {
+        padding: 0 100px;
+    }
+    .progress-bar {
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    #pokebola {
+    width: 80vw;
+    }
+    .details {
+        margin: 0 25px;
+    }
+
+    #text-box {
+        padding: 0 20px;
+    }
+
+    .types{
+        margin-top: -10px;
+        padding: 0 20px;
+    }
+
+    #poke-info {
+        height: 120vh;
+    }
 }
