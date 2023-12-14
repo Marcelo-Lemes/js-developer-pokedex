@@ -20,7 +20,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 async function createPokemonDetails(pokeDetail) {
     const pokemon = new Pokemon();
     pokemon.number = await pokeDetail.id;
-    pokemon.name = pokeDetail.name;
+    pokemon.name = await pokeDetail.name;
     pokemon.altura = (pokeDetail.height / 10);
     pokemon.peso = (pokeDetail.weight / 10);
     pokemon.habilidades = pokeDetail.abilities.map((skill) => skill.ability.name)
